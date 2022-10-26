@@ -1,0 +1,42 @@
+
+
+.ui-menu{
+    width: 50px;
+    cursor: pointer;
+    z-index: 100000;
+    background-color: #f3f3f3;
+  }
+  .ui-menu li{
+    font-size: 12px;
+    margin-left: -40px;
+    list-style: none;
+  }
+  .ui-menu-item{
+    background: #f3f3f3 !important;
+  }
+  #ui-id-1{
+    background-color: #f3f3f3;
+  }
+  #ui-id-2{
+    background-color: #f3f3f3;
+  }
+  #ui-id-3{
+    background-color: #f3f3f3;
+  }
+  .ui-widget-content{
+    background: #f3f3f3 !important;
+  }
+  .ui-menu-item{
+    border: none !important;
+  }  
+  .ui-menu-item-wrapper{
+    border: none !important;
+  }   
+  .ui-menu-item-wrapper:hover{
+    background: #56A2A8 !important;
+    color: white;
+  }
+  li .ui-menu-item-wrapper{
+    padding: 10px !important;
+  }
+  
