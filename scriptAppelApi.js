@@ -185,7 +185,9 @@ jQuery("#shipping_address_1").autocomplete({
     }
 });
 
-//Code permettant au clic de reouvrir la liste de villes proposés par l'API
+
+//Code permettant de supprimer le code postal ou la ville si l'un d'eux est modifié manuellement
+//Permet d'éviter les fausses adresses
 const adresseLivrai = document.getElementById("shipping_address_1");
 const cpLivrai = document.getElementById("shipping_postcode");
 const villeLivrai = document.getElementById("shipping_city");
@@ -194,32 +196,20 @@ const listeAdresseLivrai = document.getElementById("ui-id-6");
 const listeCpLivrai = document.getElementById("ui-id-4");
 const listeVilleLivrai = document.getElementById("ui-id-5");
 
-adresseLivrai.onclick = function(){ //lancement au clic (sur le champ) de la fonction
-    if(adresseLivrai.value != ""){ //si le champ n'est pas vide
-	    listeAdresseLivrai.style.display = '';     //affichage de la liste 
-        adresseLivrai.value = ""; //remise à zéro du champ
-        cpLivrai.value = "";
-        villeLivrai.value = "";
-        
-    }
-}
 cpLivrai.onclick = function(){ 
-    if(cpLivrai.value != ""){ 
-	    listeCpLivrai.style.display = '';
+    if((cpLivrai.value != "") || (cpLivrai.value == "")){ 
         cpLivrai.value = "";
         villeLivrai.value = "";
-        adresseLivrai.value = "";
-
     }
 }
 villeLivrai.onclick = function(){ 
-    if(villeLivrai.value != ""){ 
-	    listeVilleLivrai.style.display = '';
+    if((villeLivrai.value != "") || (villeLivrai.value == "")){ 
         villeLivrai.value = "";
         cpLivrai.value = "";
-        adresseLivrai.value = "";
     }
 }
+
+
 
 const adresseFact = document.getElementById("billing_address_1");
 const cpFact = document.getElementById("billing_postcode");
@@ -230,30 +220,15 @@ const listeCpFact = document.getElementById("ui-id-1");
 const listeVilleFact = document.getElementById("ui-id-2");
 
 
-adresseFact.onclick = function(){ 
-    if(adresseFact.value != ""){ 
-	    listeAdresseFact.style.display = '';
-        adresseFact.value = "";
-        cpFact.value = "";
-        villeFact.value = "";
-    }
-}
-
 cpFact.onclick = function(){ 
-    if(cpFact.value != ""){ 
-	    listeCpFact.style.display = '';
+    if((cpFact.value != "") || (cpFact.value == "")){ 
         cpFact.value = "";
-        villeFact.value = "";
-        adresseFact.value = "";
-          
+        villeFact.value = "";  
     }
 }
-
 villeFact.onclick = function(){ 
-    if(villeFact.value != ""){ 
-	    listeVilleFact.style.display = '';
+    if((villeFact.value != "") || (villeFact.value == "")){ 
         villeFact.value = "";
         cpFact.value = "";
-        adresseFact.value = "";
     }
 }

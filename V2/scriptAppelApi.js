@@ -194,32 +194,25 @@ const listeAdresseLivrai = document.getElementById("ui-id-6");
 const listeCpLivrai = document.getElementById("ui-id-4");
 const listeVilleLivrai = document.getElementById("ui-id-5");
 
+cpLivrai.setAttribute("readonly", "readonly"); //on bloque le champ pour éviter les erreurs d'adresses
+villeLivrai.setAttribute("readonly", "readonly");
+
 adresseLivrai.onclick = function(){ //lancement au clic (sur le champ) de la fonction
     if(adresseLivrai.value != ""){ //si le champ n'est pas vide
 	    listeAdresseLivrai.style.display = '';     //affichage de la liste 
-        adresseLivrai.value = ""; //remise à zéro du champ
-        cpLivrai.value = "";
-        villeLivrai.value = "";
-        
     }
 }
 cpLivrai.onclick = function(){ 
     if(cpLivrai.value != ""){ 
 	    listeCpLivrai.style.display = '';
-        cpLivrai.value = "";
-        villeLivrai.value = "";
-        adresseLivrai.value = "";
-
     }
 }
 villeLivrai.onclick = function(){ 
     if(villeLivrai.value != ""){ 
-	    listeVilleLivrai.style.display = '';
-        villeLivrai.value = "";
-        cpLivrai.value = "";
-        adresseLivrai.value = "";
+	    listeVilleLivrai.style.display = ''; 
     }
 }
+
 
 const adresseFact = document.getElementById("billing_address_1");
 const cpFact = document.getElementById("billing_postcode");
@@ -229,31 +222,23 @@ const listeAdresseFact = document.getElementById("ui-id-3");
 const listeCpFact = document.getElementById("ui-id-1");
 const listeVilleFact = document.getElementById("ui-id-2");
 
+cpFact.setAttribute("readonly", "readonly");
+villeFact.setAttribute("readonly", "readonly");
 
 adresseFact.onclick = function(){ 
     if(adresseFact.value != ""){ 
 	    listeAdresseFact.style.display = '';
-        adresseFact.value = "";
-        cpFact.value = "";
-        villeFact.value = "";
     }
 }
 
 cpFact.onclick = function(){ 
     if(cpFact.value != ""){ 
 	    listeCpFact.style.display = '';
-        cpFact.value = "";
-        villeFact.value = "";
-        adresseFact.value = "";
-          
     }
 }
 
 villeFact.onclick = function(){ 
     if(villeFact.value != ""){ 
 	    listeVilleFact.style.display = '';
-        villeFact.value = "";
-        cpFact.value = "";
-        adresseFact.value = "";
     }
 }
