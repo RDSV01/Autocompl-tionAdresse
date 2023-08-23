@@ -16,7 +16,7 @@ Pour tester ce système, téléchagez le code du projet. Un lien sera prochainem
 ### Mettre en place le système d'autocompletion
 
  1. Télécharger le fichier AutoComp.js et modifier le nom des id selon votre HTML
-[Fichier AutoComp.js](https://linktodocumentation)
+[Fichier AutoComp.js](https://github.com/RDSV01/AutocompletionAdresse/blob/main/AutoComp.js)
 
 2. Mettre en place jQuery sur son site en mettant le code ci-dessous avant l'ouverture de votre balise <body> et modifier l'appel du fichier AutoComp.js selon son emplacement.
 
