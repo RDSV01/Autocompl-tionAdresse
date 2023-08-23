@@ -1,18 +1,19 @@
-
-
 .ui-menu{
     width: 50px;
     cursor: pointer;
     z-index: 100000;
     background-color: #f3f3f3;
+    border-radius: 12px;
   }
   .ui-menu li{
     font-size: 12px;
     margin-left: -40px;
     list-style: none;
+    border-radius: 12px;
   }
   .ui-menu-item{
     background: #f3f3f3 !important;
+    border-radius: 12px;
   }
   #ui-id-1{
     background-color: #f3f3f3;
@@ -25,12 +26,14 @@
   }
   .ui-widget-content{
     background: #f3f3f3 !important;
+
   }
   .ui-menu-item{
     border: none !important;
   }  
   .ui-menu-item-wrapper{
     border: none !important;
+    border-radius: 12px;
   }   
   .ui-menu-item-wrapper:hover{
     background: #56A2A8 !important;
@@ -39,4 +42,55 @@
   li .ui-menu-item-wrapper{
     padding: 10px !important;
   }
+body{
+  font-family: 'Roboto', sans-serif;
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 120px;
+    margin: 0;
+}
+.header h1{
+  color: #fff;
+}
+.header p{
+  color: #fff;
+}
+.header button{
+  background-color: #56A2A8;
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 22px;
+}
+.inputs{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inputs h2{
+  color: #fff;
+}
+.inputs input{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+  border: none;
+  width: 300px;
+}
+.footer{
+  position: fixed;
+  bottom: 10px;
+}
+.footer p{
+color: #fff;
+}
+.footer a{
+  color: #fff;
+}
   
