@@ -8,7 +8,7 @@ Vous pouvez intégrer ce système facilement et rapidement sur votre site en sui
 
 ## Demo
 
-Insert gif or link to demo
+Pour tester ce système, téléchagez le code du projet. Un lien sera prochainement disponible pour tester en ligne :)
 
 
 ## Documentation
