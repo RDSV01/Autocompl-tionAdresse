@@ -24,7 +24,7 @@ Pour tester ce système, téléchagez le code du projet. Un lien sera prochainem
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.7.3/themes/base/jquery-ui.css">
-<script src="scriptAppelApi.js" defer></script>
+<script src="AutoComp.js" defer></script>
 ```
 
 
