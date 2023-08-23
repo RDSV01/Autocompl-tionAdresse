@@ -1,7 +1,4 @@
 jQuery.noConflict();
-//Code pour adresse de facturation
-//Auto-complétion du champ code postal
-
     jQuery("#postcode").autocomplete({
         source: function(request, response) {
             jQuery.ajax({
@@ -21,15 +18,11 @@ jQuery.noConflict();
                 }
             });
         },
-        // Remplissage de la ville correspondant au code postal
         select: function (event, ui) {
             jQuery('#city').val(ui.item.city);
         },
 
     });
-
-
-    //Auto-complétion du champ ville
     jQuery("#city").autocomplete({
         source: function (request, response) {
             jQuery.ajax({
@@ -41,7 +34,6 @@ jQuery.noConflict();
                 success: function (data) {
                     var cities = [];
                     response(jQuery.map(data.features, function (item) {
-                        // Ajout d'un tableau pour éviter les doublons
                         if (jQuery.inArray(item.properties.postcode, cities) == -1) {
                             cities.push(item.properties.postcode);
                             return {
@@ -54,14 +46,10 @@ jQuery.noConflict();
                 }
             });
         },
-        // Remplissage du code postal correspondant a la ville selectionnée
         select: function (event, ui) {
             jQuery('#postcode').val(ui.item.postcode);
         }
     });
-
-
-    //Auto-complétion du champ adresse
     jQuery("#address").autocomplete({
         source: function (request, response) {
             jQuery.ajax({
@@ -82,7 +70,6 @@ jQuery.noConflict();
                 }
             });
         },
-        // Remplissage du code postal et de la ville correspondant a l'adresse selectionnée
         select: function (event, ui) {
             jQuery('#postcode').val(ui.item.postcode);
             jQuery('#city').val(ui.item.city);
